@@ -31,3 +31,41 @@ Overall, the project demonstrates practical DevOps concepts: automated builds, c
 
 - Configured Jenkins to deploy using the ServiceAccount kubeconfig, ensuring no secrets or kubeconfigs are stored in the repository.
 
+<h1>Tools & Technologies Used</h1>
+
+<h2>Backend & Build</h2>
+
+- **Java 17**
+- **Spring Boot**
+- **Maven 3**
+
+<h2>CI/CD</h2>
+
+- **Jenkins** (pipeline + email notifications)
+- **SonarQube** (code quality & quality gate)
+- **Trivy** (filesystem + container image vulnerability scanning)
+
+<h2>Containerization</h2>
+
+- **Docker** (multi-stage image build)
+- **Docker Hub** (container registry)
+
+<h2>Kubernetes</h2>
+
+- **kubeadm** (cluster setup)
+- **kubectl** (deployment & verification)
+- **Kubernetes Deployment & Service manifests** (deployment-service.yaml)
+- **ServiceAccount / Role / RoleBinding** (serviceaccount.yml, role.yml, binding.yml)
+
+<h2>Monitoring</h2>
+
+- **Node Exporter** (system-level metrics)
+- **Blackbox Exporter** (HTTP/endpoint monitoring)
+- **Prometheus** (metrics scraping)
+- **Grafana** (dashboarding)
+
+<h2>Version Control</h2>
+
+- **Git + GitHub**
+
+
