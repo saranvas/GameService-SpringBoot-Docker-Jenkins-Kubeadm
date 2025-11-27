@@ -85,13 +85,47 @@ Overall, the project demonstrates practical DevOps concepts: automated builds, c
 
 - This image displays the Jenkins job dashboard for the project, including the latest successful build artifacts, overall build status, and the test result trend graph. It confirms that all unit tests passed consistently across multiple builds.
 
-<img width="1361" height="493" alt="Screenshot 2025-11-27 024053" src="https://github.com/user-attachments/assets/a56cb9ac-8212-47df-99cf-6e2cc287bb6d" />
+<img width="561" height="493" alt="Screenshot 2025-11-27 024053" src="https://github.com/user-attachments/assets/a56cb9ac-8212-47df-99cf-6e2cc287bb6d" />
 
 - This screenshot shows the Nexus Repository Manager storing the generated Maven snapshot artifacts for the project. It confirms that Jenkins successfully published the application JAR and metadata into the maven-snapshots repository during the CI pipeline.
 
 <img width="555" height="578" alt="Screenshot 2025-11-27 023950" src="https://github.com/user-attachments/assets/a162e715-734b-46aa-992f-6a6a7620a7cc" />
 
 - This image displays the SonarQube issue analysis for the project, highlighting code smells, bugs, and vulnerabilities detected during the pipeline scan. It demonstrates that static code analysis is integrated into the CI workflow and provides actionable insights for improving code quality.
+
+<img width="14174" height="4352" alt="Code Analysis (2)" src="https://github.com/user-attachments/assets/e26db119-152d-4003-8a9f-be83ca429e03" />
+
+- This screenshot shows the home page of the BoardGame web application running on the Kubernetes cluster. Although the Service is defined as a LoadBalancer, the self-hosted kubeadm cluster does not have MetalLB or any external load balancer provider configured, so no external IP was assigned. As a result, the application was accessed using the worker node’s public IP along with the allocated port (32377). This confirms that the application is deployed correctly and reachable through the service on the node.
+
+<img width="1124" height="430" alt="Screenshot 2025-11-27 113710" src="https://github.com/user-attachments/assets/6617aa87-8301-4ef1-9959-5c44e7cd77b2" />
+
+This screenshot shows the Kubernetes verification commands executed on the master node. It includes:
+
+- Running pods of the gameservice deployment.
+
+- The NodePort-based service (gameservice-ssvc) exposing port 32377.
+
+- The Deployment rollout status for 3 replicas.
+
+- The created Role (app-role), ServiceAccount (jenkins), and RoleBinding (app-rolebinding) in the webapps namespace.
+
+
+
+<img width="562" height="421" alt="Screenshot 2025-11-27 113827" src="https://github.com/user-attachments/assets/df6236a9-ea3c-4ba0-bd6d-3fe06549bb70" />
+
+- This screenshot shows the automated email notification sent by Jenkins after a successful pipeline run. The email includes the build name, status badge, and direct link to the console output, along with attached Trivy scan reports. This confirms that post-build notifications and reporting are fully integrated into the CI/CD pipeline.
+
+<img width="15516" height="3984" alt="Code Analysis (3)" src="https://github.com/user-attachments/assets/75127bf2-41e0-4644-9d20-541ce8cf9baa" />
+
+- This screenshot shows Prometheus successfully scraping multiple Blackbox Exporter endpoints. These probes continuously check the availability and response time of the application URLs running on the Kubernetes cluster. Since the cluster uses a LoadBalancer service without MetalLB, the targets are monitored using the worker node’s public IP and the assigned port (32377). All targets are in the UP state, confirming that the web application is reachable and healthy from Prometheus.
+
+<img width="9560" height="3482" alt="Code Analysis (1)" src="https://github.com/user-attachments/assets/1193465a-a8d9-4f9b-8e99-f1dadaab322a" />
+
+  <img width="13415" height="3440" alt="Code Analysis (5)" src="https://github.com/user-attachments/assets/3dca2660-ff8a-4ecc-b5b7-877bfba81d4e" />
+
+  - These screenshots show the complete monitoring setup for the application using Prometheus, Blackbox Exporter, and Grafana. The Grafana dashboard visualizes real-time probe status, HTTP duration, DNS lookup time, and probe latency for the application endpoints exposed through the Kubernetes LoadBalancer service. Prometheus continuously scrapes these targets and reports their health, while the raw Blackbox Exporter UI shows recent probe results, confirming both successful and failed checks. Together, these views validate that external uptime monitoring is fully configured and actively verifying the availability and performance of the deployed application.
+
+  
 
 
 
