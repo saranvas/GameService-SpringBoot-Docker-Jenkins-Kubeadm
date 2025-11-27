@@ -17,3 +17,17 @@ Overall, the project demonstrates practical DevOps concepts: automated builds, c
 <h1>ARCHITECTURE DIAGRAM</h1>
 
 <img width="4563" height="2124" alt="Code Analysis (1)" src="https://github.com/user-attachments/assets/4d2d2a16-839b-452a-aa42-1de61a747679" />
+
+
+- Created the webapps namespace using kubectl create namespace webapps.
+
+- Defined a minimal Role (role.yml) that grants only the required permissions to manage Deployments, Services, Pods, and ConfigMaps within webapps.
+
+- Created the ServiceAccount (serviceaccount.yml) named jenkins, which Jenkins uses to authenticate to the cluster.
+
+- Bound the Role and ServiceAccount using binding.yml, giving the jenkins ServiceAccount scoped permissions in the webapps namespace.
+
+- Generated the API token via secret.yml, and used it to build a kubeconfig stored securely in Jenkins as the credential k8-cred.
+
+- Configured Jenkins to deploy using the ServiceAccount kubeconfig, ensuring no secrets or kubeconfigs are stored in the repository.
+
