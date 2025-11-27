@@ -73,6 +73,26 @@ Overall, the project demonstrates practical DevOps concepts: automated builds, c
 
 - **Git + GitHub**
 
+<h1>Runtime Environment & System Output</h1>
+<img width="1364" height="521" alt="Screenshot 2025-11-27 024139" src="https://github.com/user-attachments/assets/fc0c82b7-9114-4bee-9f8e-b7faeddea567" />
+<img width="1355" height="577" alt="Screenshot 2025-11-27 024611" src="https://github.com/user-attachments/assets/1402286e-3224-414b-9151-b0546abecd40" />
+
+- Showcasing reference of the AWS EC2 instances, security groups, and supporting components that form the core infrastructure behind the Kubernetes cluster and CI/CD pipeline.
+<img width="1361" height="680" alt="Screenshot 2025-11-27 023920" src="https://github.com/user-attachments/assets/1b843301-adb6-4237-9042-7c242c685c34" />
+<img width="1355" height="676" alt="Screenshot 2025-11-27 023826" src="https://github.com/user-attachments/assets/4204daf2-653a-47c9-8dc6-3373af391260" />
+
+
+
+- This image displays the Jenkins job dashboard for the project, including the latest successful build artifacts, overall build status, and the test result trend graph. It confirms that all unit tests passed consistently across multiple builds.
+
+<img width="1361" height="493" alt="Screenshot 2025-11-27 024053" src="https://github.com/user-attachments/assets/a56cb9ac-8212-47df-99cf-6e2cc287bb6d" />
+
+- This screenshot shows the Nexus Repository Manager storing the generated Maven snapshot artifacts for the project. It confirms that Jenkins successfully published the application JAR and metadata into the maven-snapshots repository during the CI pipeline.
+
+<img width="555" height="578" alt="Screenshot 2025-11-27 023950" src="https://github.com/user-attachments/assets/a162e715-734b-46aa-992f-6a6a7620a7cc" />
+
+- This image displays the SonarQube issue analysis for the project, highlighting code smells, bugs, and vulnerabilities detected during the pipeline scan. It demonstrates that static code analysis is integrated into the CI workflow and provides actionable insights for improving code quality.
+
 
 
 
