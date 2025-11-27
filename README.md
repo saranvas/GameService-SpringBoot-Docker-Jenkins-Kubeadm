@@ -13,3 +13,7 @@ To complement the CI/CD and deployment pipeline, the system includes real-time i
 This provides end-to-end visibility of node performance, service uptime, and potential failures across the environment.
 
 Overall, the project demonstrates practical DevOps concepts: automated builds, code quality enforcement, secure containerization, vulnerability scanning, registry integration, Kubernetes deployment, and monitoring — representing a clean, end-to-end workflow from source code to running workload.
+
+<h1>ARCHITECTURE DIAGRAM</h1>
+
+<img width="4563" height="2124" alt="Code Analysis (1)" src="https://github.com/user-attachments/assets/4d2d2a16-839b-452a-aa42-1de61a747679" />
