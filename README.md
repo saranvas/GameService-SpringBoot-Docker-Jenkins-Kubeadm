@@ -18,7 +18,7 @@ Overall, the project demonstrates practical DevOps concepts: automated builds, c
 
 <img width="4563" height="2124" alt="Code Analysis (1)" src="https://github.com/user-attachments/assets/4d2d2a16-839b-452a-aa42-1de61a747679" />
 
-
+- Spun up 3 EC2 machines and one is for control plane and other two as worker nodes and installed kubeadm, kubectl, 
 - Created the webapps namespace using kubectl create namespace webapps.
 
 - Defined a minimal Role (role.yml) that grants only the required permissions to manage Deployments, Services, Pods, and ConfigMaps within webapps.
@@ -67,5 +67,6 @@ Overall, the project demonstrates practical DevOps concepts: automated builds, c
 <h2>Version Control</h2>
 
 - **Git + GitHub**
+
 
 
